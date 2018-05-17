@@ -44,7 +44,7 @@ addValue_Test() ->
   M1 = pollution:addStation(M, "S1", {1,1}),
   M2 = pollution:addValue(M1, "S1", Time, pm10, 50),
   ?assertEqual({monitor, #{"S1" => {station,"S1", {1,1}, #{{pm10,Time} =>
-  {measurement,pm10,50, Time}}}}, #{{1,1} => "S1"}}, M2),
+    {measurement,pm10,50, Time}}}}, #{{1,1} => "S1"}}, M2),
 
   M3 = pollution:addValue(M1, {1, 1}, Time, pm10, 50),
   ?assertEqual({monitor, #{"S1" => {station,"S1", {1,1}, #{{pm10,Time} =>

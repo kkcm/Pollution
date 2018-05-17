@@ -72,7 +72,7 @@ removeValue(Monitor, StationNameOrCoordinates, Date, Type) ->
     false -> {error, "Date or type is wrong."};
     true -> case StationNameOrCoordinates of
               {Longitude, Latitude} -> removeValueChecker(exist(findCoordinates({Longitude, Latitude}, Monitor)), Monitor, {Longitude, Latitude}, Date, Type);
-              StationName -> removeValueChecker(exist(findStationName(StationName, Monitor)), Monitor, StationName, Date, Type)
+               StationName -> removeValueChecker(exist(findStationName(StationName, Monitor)), Monitor, StationName, Date, Type)
             end
   end.
 
